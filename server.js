@@ -35,7 +35,7 @@ app.post('/style-transfer', upload.single('image'), async (req, res) => {
         res.json({ output_url: outputUrl });
     } catch (error) {
         console.error('Error en la API:', error.message);
-        res.status(500).send('Error al aplicar el estilo.');
+        res.status(500).json('Error al aplicar el estilo.');
     }
 });
 
